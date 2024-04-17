@@ -23,15 +23,12 @@ import com.pro.foodorder.constant.Constant;
 import com.pro.foodorder.constant.GlobalFunction;
 import com.pro.foodorder.database.FoodDatabase;
 import com.pro.foodorder.databinding.FragmentCartBinding;
-import com.pro.foodorder.event.ReloadListCartEvent;
 import com.pro.foodorder.model.Food;
 import com.pro.foodorder.model.Order;
 import com.pro.foodorder.prefs.DataStoreManager;
 import com.pro.foodorder.utils.StringUtil;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -219,11 +216,6 @@ public class CartFragment extends BaseFragment {
             }
         }
         return result;
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMessageEvent(ReloadListCartEvent event) {
-        displayListFoodInCart();
     }
 
     @Override

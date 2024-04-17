@@ -16,11 +16,8 @@ import com.pro.foodorder.adapter.MoreImageAdapter;
 import com.pro.foodorder.constant.Constant;
 import com.pro.foodorder.database.FoodDatabase;
 import com.pro.foodorder.databinding.ActivityFoodDetailBinding;
-import com.pro.foodorder.event.ReloadListCartEvent;
 import com.pro.foodorder.model.Food;
 import com.pro.foodorder.utils.GlideUtils;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
@@ -190,7 +187,6 @@ public class FoodDetailActivity extends BaseActivity {
             FoodDatabase.getInstance(FoodDetailActivity.this).foodDAO().insertFood(mFood);
             bottomSheetDialog.dismiss();
             setStatusButtonAddToCart();
-            EventBus.getDefault().post(new ReloadListCartEvent());
         });
 
         bottomSheetDialog.show();
