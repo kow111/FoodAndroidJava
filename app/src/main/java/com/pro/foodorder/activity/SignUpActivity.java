@@ -74,7 +74,7 @@ public class SignUpActivity extends BaseActivity {
                             finishAffinity();
                         }
                     } else {
-                        Toast.makeText(SignUpActivity.this, getString(R.string.msg_sign_up_error),
+                        Toast.makeText(SignUpActivity.this, "Đã tồn tại email trên hệ thống, hãy thử 1 email khác!",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
