@@ -86,7 +86,7 @@
 
     <Button
         android:id="@+id/btnSaveQr"
-        android:layout_width="150dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:layout_gravity="center"
