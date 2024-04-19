@@ -1,6 +1,7 @@
 package com.pro.foodorder.constant;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.ComponentName;
@@ -163,7 +164,7 @@ public class GlobalFunction {
         File sdCard = Environment.getExternalStorageDirectory();
         File directory = new File(sdCard.getAbsolutePath() + "/Download");
         directory.mkdirs();
-        String fileName = String.format("%d.png", System.currentTimeMillis());
+        @SuppressLint("DefaultLocale") String fileName = String.format("%d.png", System.currentTimeMillis());
         File outFile = new File(directory, fileName);
 
         showToastMessage(activity, "Save image success");

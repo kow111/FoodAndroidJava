@@ -19,7 +19,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AddFoodActivity extends BaseActivity {
+public class
+
+AddFoodActivity extends BaseActivity {
 
     private ActivityAddFoodBinding mActivityAddFoodBinding;
     private boolean isUpdate;
