@@ -9,6 +9,7 @@ public class Order implements Serializable {
     private String email;
     private String phone;
     private String address;
+    private String note;
     private int amount;
     private String foods;
     private int payment;
@@ -18,12 +19,13 @@ public class Order implements Serializable {
     }
 
     public Order(long id, String name, String email, String phone,
-                 String address, int amount, String foods, int payment, boolean completed) {
+                 String address, String note, int amount, String foods, int payment, boolean completed) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.address = address;
+        this.note = note;
         this.amount = amount;
         this.foods = foods;
         this.payment = payment;
@@ -36,6 +38,14 @@ public class Order implements Serializable {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 
     public String getName() {

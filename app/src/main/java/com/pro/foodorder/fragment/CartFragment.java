@@ -166,6 +166,7 @@ public class CartFragment extends BaseFragment {
         TextView edtNameOrder = viewDialog.findViewById(R.id.edt_name_order);
         TextView edtPhoneOrder = viewDialog.findViewById(R.id.edt_phone_order);
         TextView edtAddressOrder = viewDialog.findViewById(R.id.edt_address_order);
+        TextView edtOrderNote = viewDialog.findViewById(R.id.edt_note);
         TextView tvCancelOrder = viewDialog.findViewById(R.id.tv_cancel_order);
         TextView tvCreateOrder = viewDialog.findViewById(R.id.tv_create_order);
 
@@ -180,13 +181,14 @@ public class CartFragment extends BaseFragment {
             String strName = edtNameOrder.getText().toString().trim();
             String strPhone = edtPhoneOrder.getText().toString().trim();
             String strAddress = edtAddressOrder.getText().toString().trim();
+            String strNote = edtOrderNote.getText().toString().trim();
 
             if (StringUtil.isEmpty(strName) || StringUtil.isEmpty(strPhone) || StringUtil.isEmpty(strAddress)) {
                 GlobalFunction.showToastMessage(getActivity(), getString(R.string.message_enter_infor_order));
             } else {
                 long id = System.currentTimeMillis();
                 String strEmail = DataStoreManager.getUser().getEmail();
-                Order order = new Order(id, strName, strEmail, strPhone, strAddress,
+                Order order = new Order(id, strName, strEmail, strPhone, strAddress,strNote,
                         mAmount, getStringListFoodsOrder(), Constant.TYPE_PAYMENT_CASH, false);
                 ControllerApplication.get(getActivity()).getBookingDatabaseReference()
                         .child(String.valueOf(id))

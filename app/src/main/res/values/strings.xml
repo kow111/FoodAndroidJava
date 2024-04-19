@@ -40,6 +40,7 @@
     <string name="dialog_cancel">Hủy</string>
     <string name="order_detail">Chi tiết đơn hàng</string>
     <string name="address_delivery">Địa chỉ giao hàng</string>
+    <string name="order_note">Ghi chú</string>
     <string name="message_enter_infor_order">Vui lòng điền đầy đủ thông tin giao hàng</string>
     <string name="hint_search_name">Tên món ăn…</string>
     <string name="price_label">Giá:</string>
