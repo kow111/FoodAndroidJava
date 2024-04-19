@@ -59,6 +59,7 @@ public class AdminOrderAdapter extends RecyclerView.Adapter<AdminOrderAdapter.Ad
         holder.mItemAdminOrderBinding.tvAddress.setText(order.getAddress());
         holder.mItemAdminOrderBinding.tvMenu.setText(order.getFoods());
         holder.mItemAdminOrderBinding.tvDate.setText(DateTimeUtils.convertTimeStampToDate(order.getId()));
+        holder.mItemAdminOrderBinding.tvNote.setText(order.getNote());
 
         String strAmount = order.getAmount() + Constant.CURRENCY;
         holder.mItemAdminOrderBinding.tvTotalAmount.setText(strAmount);
