@@ -8,9 +8,9 @@ public interface AboutUsConfig {
 
     String PAGE_FACEBOOK = "https://www.facebook.com/ngongocthong.kos";
     String LINK_FACEBOOK = "https://www.facebook.com/ngongocthong.kos";
-    String LINK_YOUTUBE = "...";
+    String LINK_YOUTUBE = "https://www.youtube.com/@LCKTiengViet";
     String PHONE_NUMBER = "0963094408";
-    String GMAIL = "...";
+    String GMAIL = "21110312@student.hcmute.edu.vn";
     String ZALO_LINK = "...";
     String WEBSITE = "https://www.facebook.com/ngongocthong.kos";
 }
