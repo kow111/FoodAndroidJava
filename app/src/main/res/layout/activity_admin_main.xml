@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
-        app:itemIconTint="@color/custom_bottom_navigation"
-        app:itemTextColor="@color/custom_bottom_navigation"
+        app:itemIconTint="@color/green"
+        app:itemTextColor="@color/black"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/admin_menu_bottom_navigation" />
 
