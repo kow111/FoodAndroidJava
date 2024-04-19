@@ -55,6 +55,8 @@ public class ContactFragment extends BaseFragment {
     private void initListener() {
         mFragmentContactBinding.layoutWebsite.setOnClickListener(view -> startActivity(new Intent(Intent.ACTION_VIEW,
                 Uri.parse(AboutUsConfig.WEBSITE))));
+        mFragmentContactBinding.btnSaveQr.setOnClickListener(v -> GlobalFunction.saveImageToStorage(getActivity(),
+                mFragmentContactBinding.qrCode));
     }
 
     public List<Contact> getListContact() {

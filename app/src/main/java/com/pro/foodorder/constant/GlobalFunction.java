@@ -7,13 +7,18 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
 
 import com.pro.foodorder.activity.AdminMainActivity;
 import com.pro.foodorder.activity.MainActivity;
@@ -21,6 +26,8 @@ import com.pro.foodorder.listener.IGetDateListener;
 import com.pro.foodorder.prefs.DataStoreManager;
 import com.pro.foodorder.utils.StringUtil;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.Normalizer;
 import java.util.Calendar;
 import java.util.regex.Pattern;
@@ -144,5 +151,29 @@ public class GlobalFunction {
                 callBack, mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH),
                 mCalendar.get(Calendar.DATE));
         datePicker.show();
+    }
+
+    public static void saveImageToStorage(FragmentActivity activity, ImageView qrCode) {
+        if (qrCode.getDrawable() == null) {
+            return;
+        }
+        BitmapDrawable bitmapDrawable = (BitmapDrawable) qrCode.getDrawable();
+        Bitmap bitmap = bitmapDrawable.getBitmap();
+        FileOutputStream fileOutputStream = null;
+        File sdCard = Environment.getExternalStorageDirectory();
+        File directory = new File(sdCard.getAbsolutePath() + "/Download");
+        directory.mkdirs();
+        String fileName = String.format("%d.png", System.currentTimeMillis());
+        File outFile = new File(directory, fileName);
+
+        showToastMessage(activity, "Save image success");
+        try {
+            fileOutputStream = new FileOutputStream(outFile);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+            fileOutputStream.flush();
+            fileOutputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
