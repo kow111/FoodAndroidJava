@@ -12,5 +12,5 @@ public interface AboutUsConfig {
     String PHONE_NUMBER = "0963094408";
     String GMAIL = "...";
     String ZALO_LINK = "...";
-    String WEBSITE = "...";
+    String WEBSITE = "https://www.facebook.com/ngongocthong.kos";
 }
