@@ -36,7 +36,7 @@
             android:layout_height="@dimen/define_dimen_30"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/img_search"
-            android:background="@color/colorPrimaryDark" />
+            android:background="@color/green" />
 
         <ImageView
             android:id="@+id/img_search"
@@ -81,7 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/define_dimen_30"
                         android:layout_gravity="center"
-                        app:ci_drawable="@drawable/bg_indicatior_selected"
+                        app:ci_drawable="@drawable/bg_green_shape_corner_6"
                         app:ci_drawable_unselected="@drawable/bg_indicatior_unselected" />
                 </LinearLayout>
 
@@ -92,7 +92,7 @@
                     android:layout_marginTop="@dimen/define_dimen_10"
                     android:layout_marginBottom="@dimen/define_dimen_5"
                     android:text="@string/food_suggest"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/green"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
