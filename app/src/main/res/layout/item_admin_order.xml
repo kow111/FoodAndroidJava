@@ -181,7 +181,7 @@
                 android:layout_width="@dimen/define_dimen_100"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="@string/label_date"
+                android:text="@string/label_note"
                 android:textSize="@dimen/text_size_small" />
 
             <TextView

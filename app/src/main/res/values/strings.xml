@@ -69,6 +69,7 @@
     <string name="label_payment">Thanh toán:</string>
     <string name="label_menu">Thực đơn:</string>
     <string name="label_popular">Phổ biến:</string>
+    <string name="label_note">Ghi chú:</string>
 
     <string name="status_new">Chờ xử lý</string>
     <string name="status_cancel">Hủy đơn hàng</string>
